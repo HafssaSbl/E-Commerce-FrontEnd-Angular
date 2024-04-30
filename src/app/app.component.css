@@ -1,0 +1,81 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+  }
+  .rounded-photo {
+    border-radius: 50%;
+    width: 100px; /* ajustez la taille de l'image selon vos besoins */
+    height: 100px; /* ajustez la taille de l'image selon vos besoins */
+    color: rgb(177, 50, 50);
+    margin-left: 20%;
+    margin-top: 10%;
+    background-color: rgb(169, 31, 31);
+  }
+  
+  #icons{
+    color: brown;
+  }
+  .dashboard {
+    display: flex;
+    height: 100%; /* Ajustement pour occuper toute la hauteur de la page */
+    margin-top: 1%;
+  }
+  
+  .sidebar {
+    background-color: #d4d3d3;
+    color: #000000;
+    width: 250px; /* Largeur de la barre latérale */
+    height: 1000px; /* Hauteur de la barre latérale */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Affichage en colonne pour aligner verticalement */
+    align-items: flex-start; /* Alignement à gauche */
+    overflow-y: auto; /* Ajouter un défilement vertical */
+  }
+  
+  
+  
+  .sidebar__menu {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10%;
+    margin-left: 3%;
+  }
+  
+  .sidebar__item {
+    margin-bottom: 10px;
+    margin-top: 20%;
+  }
+  
+  .sidebar__link {
+    color: #000000;
+    text-decoration: none;
+    margin-top: 50%;
+  }
+  
+  .sidebar__link:hover {
+    text-decoration: underline;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .header__title {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .content {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
