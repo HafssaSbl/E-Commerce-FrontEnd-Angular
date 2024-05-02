@@ -1,0 +1,199 @@
+.body{
+  background-color: #000000;
+}
+.dashboard {
+  display: flex;
+  height: 100%;
+  margin-top: 1%;
+}
+
+.sidebar {
+  background-color: #f3f2f2;
+  color: #a13b3b;
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
+  border-radius: 20px;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.sidebar__menu {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10%;
+  margin-left: 0;
+}
+
+.sidebar__item {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.sidebar__link:hover {
+  text-decoration: underline;
+}
+
+
+
+.AdminDashboard {
+  font-family: 'Arial', sans-serif; /* Police de caractère */
+  font-size: 24px; /* Taille de la police */
+  font-weight: bold; /* Poids de la police */
+  color: #ffffff; /* Couleur du texte */
+  background-color: #4CAF50; /* Couleur de fond */
+  padding: 8px 8px; /* Espacement intérieur */
+  border-radius: 10px; /* Bordure arrondie */
+ 
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: #f3f2f2;
+  color: #a13b3b;
+  width: 250px;
+  height: 1000px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
+  border-radius: 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header__title {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.content {
+  background-color: #c7c6c6;
+  padding: 20px;
+  width: 1140px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.sub-categories {
+  display: none;
+}
+
+.sub-categories li {
+  margin-left: 20px;
+}
+
+.sub-categories li:hover {
+  text-decoration: underline;
+}
+
+/* Ajoutez vos styles CSS existants ici */
+
+.sidebar__item.clicked {
+  border: 2px solid #000000;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #000000;
+  border-radius: 20px;
+  height: 35px;
+  width: 150px;
+  margin-left: 20px;
+  
+  display: flex; /* Utilisez flexbox pour aligner les éléments horizontalement */
+  align-items: center; /* Centrez les éléments verticalement */
+  transition: all 0.3s ease;
+  
+}
+
+.sidebar__item.clicked i {
+  display: flex; /* Utilisez flexbox pour aligner l'icône */
+  align-items: center; /* Centrez l'icône verticalement */
+  transition: all 0.3s ease;
+}
+
+
+.sidebar__item.clicked a {
+  color: #e9e8e8;
+
+}
+
+.icon-products {
+  color: #3aa6d4; /* Rouge */
+  margin-right: 8%;
+  font-size: x-large;
+}
+
+.icon-users {
+  color: #14bf2b; /* Bleu */
+  margin-right: 8%;
+  font-size: x-large;
+}
+
+.icon-orders {
+  color: #ff0800; /* Vert */
+  margin-right: 8%;
+  font-size: x-large;
+}
+
+.icon-categories {
+  color: #ff33d4; /* Rose */
+  margin-right: 5%;
+  font-size: 20px;
+}
+.navbar {
+  background-color: #000000; /* Couleur de fond de la barre de navigation */
+  width: 100%;
+  border-radius: 10px;
+}
+
+.nav-list {
+  list-style-type: none; /* Suppression des puces */
+  padding: 0; /* Suppression des marges intérieures */
+  margin: 0; /* Suppression des marges extérieures */
+  display: flex; /* Utilisation de flexbox pour afficher les éléments horizontalement */
+  margin-left: 55%;
+}
+
+.nav-list li {
+  margin-right: 20px; /* Marge à droite entre les éléments de la liste */
+}
+
+.nav-list li:last-child {
+  margin-right: 0; /* Suppression de la marge à droite pour le dernier élément de la liste */
+}
+
+.nav-list li a {
+  display: flex; /* Affichage en flexbox pour aligner les icônes et le texte verticalement */
+  align-items: center; /* Centre l'alignement vertical */
+  color: white; /* Couleur du texte des liens */
+  text-decoration: none; /* Suppression du soulignement des liens */
+  padding: 10px 15px; /* Espacement intérieur des liens */
+}
+
+.nav-list li a:hover {
+  background-color: #555; /* Couleur de fond lors du survol */
+}
+
+.nav-list li a i {
+  margin-right: 5px; /* Marge à droite pour séparer l'icône du texte */
+}

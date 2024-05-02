@@ -1,0 +1,50 @@
+<div class="body">
+  <div class="dashboard">
+    <nav class="sidebar">
+      <i id="icons" class="AdminDashboard">AdminDashboard</i>
+      
+      <li class="sidebar__item" [ngClass]="{'clicked': showProducts}" style="margin-top: 30%;">
+        <a routerLink="/product" class="sidebar__link" (click)="toggleProducts()">
+          <i class="fa-solid fa-box icon-products"></i>
+          <span>Products</span>
+        </a>
+      </li>
+      <li class="sidebar__item" [ngClass]="{'clicked': showUsers}" style="margin-top: 10%;">
+        <a href="#" class="sidebar__link" (click)="toggleUsers()">
+          <i class="fa-solid fa-user icon-users"></i>
+          <span>Users</span>
+        </a>
+      </li>
+      <li class="sidebar__item" [ngClass]="{'clicked': showOrders}" style="margin-top: 10%;">
+        <a href="#" class="sidebar__link" (click)="toggleOrders()">
+          <i class="fa-brands fa-first-order icon-orders"></i>
+          <span>Orders</span>
+        </a>
+      </li>
+      <li class="sidebar__item" [ngClass]="{'clicked': showCategories}"style="margin-top: 10%;">
+        <a href="#" class="sidebar__link" (click)="toggleCategories()">
+          <i class="fa-solid fa-layer-group icon-categories"></i>
+          <span>Categories</span>
+        </a>
+        <ul *ngIf="showCategories" class="sub-categories">
+          <li><i class="fa-solid fa-arrow-right-to-arc"></i><a href="#" class="sidebar__link"> Categories</a></li>
+          <li><i class="fa-solid fa-arrow-right-to-arc"></i><a href="#" class="sidebar__link"> Sous-Categories</a></li>
+          <!-- Ajoutez ici vos sous-catégories -->
+        </ul>
+      </li>
+      
+    </nav>
+    <main class="main-content">
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li><a href="#"><i class="fas fa-home"></i> Accueil</a></li>
+          <li><a href="#"><i class="fas fa-user"></i> Profil</a></li>
+          <li><a href="#"><i class="fas fa-envelope"></i> Messages</a></li>
+          <li><a href="#"><i class="fas fa-cog"></i> Paramètres</a></li>
+        
+        </ul>
+      </nav>   
+      <router-outlet></router-outlet>   
+    </main>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<button class="btn-new" (click)="toggleForm()">Post New product</button>
+
+<br>
+<br>
+
+<div *ngIf="showForm" class="form-container">
+  <div class="center">
+    <h1 style="margin-top: 1%">ADD PRODUCT</h1>
+    <form>
+      <div class="inputbox">
+        <input type="text" required="required">
+        <span>Product Name</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" required="required">
+        <span>description</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" required="required">
+        <span>price</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" required="required">
+        <span>image</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" required="required">
+        <span>category</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" required="required">
+        <span>souscategory</span>
+      </div>
+      <div class="inputbox">
+        <input type="button" value="submit">
+      </div>
+    </form>
+  </div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th>Category</th>
+      <th>Subcategory</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+  <tr *ngFor="let product of products">
+
+    <td>{{product.product_name}}</td>
+
+    <td>{{product.description}}</td>
+
+    <td>{{product.price}}</td>
+    <td>{{product.image}}</td>
+
+    <td>{{product.categoryId}}</td>
+
+    <td>{{product.souscategoryId}}</td>
+    
+
+<button class="btn-update" routerLink="/product/{{product.id}}">Modifier</button>
+<button class="btn-delete" (click)="deleteProduct(product.id)">Delete</button>
+
+  </tr>
+
+  </tbody>
+
+</table>

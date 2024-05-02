@@ -7,9 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-ecommerce';
-  showCategories: boolean = false;
-  
-  toggleCategories() {
-    this.showCategories = !this.showCategories;
-  }
+ 
 }

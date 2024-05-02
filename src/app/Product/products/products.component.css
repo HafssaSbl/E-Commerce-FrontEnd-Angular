@@ -1,0 +1,155 @@
+/* Button styles */
+.btn-new, .btn-update, .btn-delete {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+  }
+  .btn-delete{
+    margin-left: 7%;
+    margin-top: 2%;
+  }
+  .btn-update{
+    margin-top: 2%;
+  }
+  .btn-new{
+    margin-top: 10%;
+    margin-left: 950px;
+  }
+  
+  .btn-new:hover, .btn-update:hover, .btn-delete:hover {
+    background-color: #3aa6d4;
+  }
+  
+  /* Table styles */
+  table {
+    width: 80%;
+    margin-left: 10%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #3aa6d4;
+    color: #fff;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Alternate row color */
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  /* Form container */
+.form-container {
+    position: absolute;
+    margin-top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(101, 100, 100, 0.8); /* Transparent white background */
+    width: 450px;
+    height: 650px;
+    border-radius: 10px;
+  }
+  
+ 
+
+  @import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
+
+  /* Global styles */
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, greenyellow, dodgerblue);
+    font-family: "Sansita Swashed", cursive;
+  }
+  
+  /* Container styles */
+  .center {
+    position: relative;
+    padding: 50px 50px;
+    border-radius: 10px;
+  }
+  
+  /* Heading styles */
+  .center h1 {
+    font-size: 2em;
+    border-left: 5px solid dodgerblue;
+    color: #ffffff;
+    letter-spacing: 5px;
+    margin-bottom: 60px;
+    font-weight: bold;
+    padding-left: 10px;
+    margin-top: 2%;
+  }
+  
+  /* Input container styles */
+  .center .inputbox {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    margin-top: 1%;
+    margin-bottom: 20px; /* Adjusted margin */
+  }
+  
+  /* Input styles */
+  .center .inputbox input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 2px solid #000;
+    outline: none;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2em;
+  }
+  
+  /* Label styles */
+  .center .inputbox span {
+    position: absolute;
+    color: #000000;
+    top: 14px;
+    left: 20px;
+    font-size: 1em;
+    transition: 0.6s;
+    font-family: sans-serif;
+  }
+  
+  /* Label animation on focus or valid input */
+  .center .inputbox input:focus ~ span,
+  .center .inputbox input:valid ~ span {
+    transform: translateX(-13px) translateY(-35px);
+    font-size: 1em;
+  }
+  
+  /* Button styles */
+  .center .inputbox [type="button"] {
+    width: 50%;
+    background: dodgerblue;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  .center .inputbox:hover [type="button"] {
+    background: linear-gradient(45deg, greenyellow, dodgerblue);
+  }
+  
