@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { MenuDashBoardComponent } from './Commun/menu-dash-board/menu-dash-board.component';
 import { ProductsComponent } from './Product/products/products.component';
 import { AddProductComponent } from './Product/add-product/add-product.component';
+import { UserComponent } from './Users/user/user.component';
+import { CategoryComponent } from './Categories/category/category.component';
+import { SubCategoryComponent } from './SubCategories/sub-category/sub-category.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { AddProductComponent } from './Product/add-product/add-product.component
     MenuDashBoardComponent,
     ProductsComponent,
     AddProductComponent,
+    UserComponent,
+    CategoryComponent,
+    SubCategoryComponent,
   ],
   imports: [
     BrowserModule,

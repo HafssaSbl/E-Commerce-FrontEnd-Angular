@@ -1,1 +1,32 @@
-<p>add-product works!</p>
+<div class="container">
+    <div class="form-container">
+      <h2 class="form-title">Modifier un produit</h2>
+      <form [formGroup]="postProductForm">
+        <div class="form-group">
+          <label for="product_name">product_name</label>
+          <input type="text" id="product_name" name="product_name" required formControlName="product_name">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" id="description" name="description" required formControlName="description">
+        </div>
+        <div class="form-group">
+          <label for="price">Prix</label>
+          <input type="number" id="price" name="price" required formControlName="price">
+        </div>
+        <div class="form-group">
+          <label for="image">image</label>
+          <input type="text" id="image" name="image" required formControlName="image">
+        </div>
+        <div class="form-group">
+          <label for="categoryId">categoryId</label>
+          <input type="text" id="categoryId" name="categoryId" required formControlName="categoryId">
+        </div>
+        <div class="form-group">
+          <label for="souscategoryId">souscategoryId</label>
+          <input type="text" id="souscategoryId" name="souscategoryId" required formControlName="souscategoryId">
+        </div>
+        <button type="submit" (click)="postproduct()">Post</button>
+      </form>
+    </div>
+  </div>

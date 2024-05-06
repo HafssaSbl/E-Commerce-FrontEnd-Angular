@@ -4,6 +4,6 @@ interface Product{
     description : String;
     price : string;
     image : string;
-    categoryId : number;
+    categoryId : Number;
     souscategoryId : Number;
 }

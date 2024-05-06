@@ -21,8 +21,9 @@
           <span>Orders</span>
         </a>
       </li>
+      
       <li class="sidebar__item" [ngClass]="{'clicked': showCategories}"style="margin-top: 10%;">
-        <a href="#" class="sidebar__link" (click)="toggleCategories()">
+        <a routerLink="/category" href="#" class="sidebar__link" (click)="toggleCategories()">
           <i class="fa-solid fa-layer-group icon-categories"></i>
           <span>Categories</span>
         </a>
@@ -32,6 +33,7 @@
           <!-- Ajoutez ici vos sous-catégories -->
         </ul>
       </li>
+      
       
     </nav>
     <main class="main-content">

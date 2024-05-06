@@ -8,7 +8,7 @@
 }
 
 .sidebar {
-  background-color: #f3f2f2;
+  background-color: #e1dfdf;
   color: #a13b3b;
   width: 250px;
   padding: 20px;
@@ -66,8 +66,8 @@
   margin-right: 2%;
   margin-top: 2%;
   margin-bottom: 2%;
-  background-color: #f3f2f2;
-  color: #a13b3b;
+  background-color: #e1dfdf;
+  color: #000000;
   width: 250px;
   height: 1000px;
   padding: 20px;
