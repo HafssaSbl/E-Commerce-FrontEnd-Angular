@@ -34,6 +34,21 @@
   </div>
 
 
+  <div style="margin-top: 16%; margin-left: 5%; height: 40%;" *ngIf="showEditCategoryForm" class="form-container">
+    <div class="center">
+      <h1 style="margin-top: 1%">Update Category</h1>
+      <form [formGroup]="editCategoryForm" (ngSubmit)="updateCategory()">
+        <div class="inputbox">
+          <input type="text" required formControlName="name">
+          <span>Category Name</span>
+        </div>
+        <div class="inputbox">
+          <button type="submit">Submit</button>
+        </div>
+      </form>      
+    </div>
+  </div>
+
 
   <table style="margin-left: 5%;">
   
@@ -64,8 +79,8 @@
                                 <td>{{CategorY.name}}</td>
                                 
                                 <td>
-                                    <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                    <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    <a class="edit" title="Edit" (click)="showEditForm(CategorY)" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                    <a (click)="deleteCategory(CategorY.id)" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                                  
                                 </td>
                               </tr>  

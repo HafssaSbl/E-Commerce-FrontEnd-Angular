@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductServiceService } from '../product-service.service';
 import { FormBuilder,FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -113,17 +113,22 @@ export class ProductsComponent implements OnInit {
     console.log(this.postProductForm.value);
     this.productService.postProduct(this.postProductForm.value).subscribe((res) => {
       console.log(res);
-
+      this.loadProducts();    
       this.router.navigateByUrl("/product");
+      this.postProductForm.reset();
     });
-this.editProductForm.reset();
   }
-
+loadProducts() {
+    this.productService.getAllProduct().subscribe((products) => {
+      this.products = products;
+    });
+  }
   updateProduct() {
     // Assurez-vous que this.id est correctement défini
     this.productService.updateProduct(this.id, this.editProductForm.value).subscribe((res) => {
       console.log(res);
       if (res.id != null) {
+        this.loadProducts(); 
         this.router.navigateByUrl("/product");
       }
     });
