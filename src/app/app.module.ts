@@ -12,6 +12,7 @@ import { AddProductComponent } from './Product/add-product/add-product.component
 import { UserComponent } from './Users/user/user.component';
 import { CategoryComponent } from './Categories/category/category.component';
 import { SubCategoryComponent } from './SubCategories/sub-category/sub-category.component';
+import { UpdateProductComponent } from './Product/update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SubCategoryComponent } from './SubCategories/sub-category/sub-category.
     UserComponent,
     CategoryComponent,
     SubCategoryComponent,
+    UpdateProductComponent,
   ],
   imports: [
     BrowserModule,

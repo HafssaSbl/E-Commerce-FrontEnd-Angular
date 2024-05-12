@@ -18,7 +18,7 @@
 <div style="margin-top: 16%; margin-left: 5%;" *ngIf="showForm" class="form-container">
   <div class="center">
     <h1 style="margin-top: 1%">ADD PRODUCT</h1>
-    <form [formGroup]="postProductForm">
+    <form [formGroup]="postProductForm" >
       <div class="inputbox">
         <input type="text" required="required" formControlName="product_name">
         <span>Product Name</span>
@@ -61,7 +61,7 @@
                       <div class="row">
                           <div style="color: rgb(255, 255, 255);" class="col-sm-8"><h2>Product <b>Details</b></h2></div>
                           <div class="col-sm-4">
-                              <button type="button"  (click)="toggleForm()" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
+                              <button type="button" (click)="toggleForm()" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
                           </div>
                       </div>
                   </div>
@@ -88,9 +88,8 @@
                             <td>{{product.categoryId}}</td>
                             <td>{{product.souscategoryId}}</td>
                             <td>
-                              <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                              <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                              <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                              <a class="edit" title="Edit" (click)="showEditForm(product)" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                              <a (click)="deleteProduct(product.id)" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                           </td>
                           </tr>      
                       </tbody>
@@ -101,4 +100,41 @@
       
   </tbody>
 </table>
+
+
+<div style="margin-top: 0%; margin-left: 5%;" *ngIf="showEditProductForm" class="form-container">
+  <div class="center">
+    <h1 style="margin-top: 1%">EDIT PRODUCT</h1>
+    <form [formGroup]="editProductForm" (ngSubmit)="updateProduct()">
+      <div class="inputbox">
+        <input type="text" formControlName="product_name" required="required">
+        <span>Product Name</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" formControlName="description" required="required">
+        <span>Description</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" formControlName="price" required="required">
+        <span>Price</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" formControlName="image" required="required">
+        <span>Image</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" formControlName="categoryId" required="required">
+        <span>Category</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" formControlName="souscategoryId" required="required">
+        <span>Souscategory</span>
+      </div>
+      <div class="inputbox">
+        <input type="submit" value="Submit" (click)="updateProduct()">
+      </div>
+    </form>
+  </div>
+</div>
+
 </html>

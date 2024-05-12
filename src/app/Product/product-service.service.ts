@@ -30,4 +30,7 @@ export class ProductServiceService {
   deleteProduct(id : number):Observable<any>{
     return this.http.delete(BASIC_URL+"/catalogs/api/v1/products/"+id);
   }
+  getAllCategory():Observable<any>{
+    return this.http.get(BASIC_URL+"/catalogs/api/v1/categories/");
+  }
 }
